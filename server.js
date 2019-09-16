@@ -10,10 +10,10 @@ const
   app = express(),
   mailController = require('./server/controllers/mail'),
   bodyParser = require('body-parser'),
-  redirectToHTTPS = require('express-http-to-https').redirectToHTTPS;
+ // cdr redirectToHTTPS = require('express-http-to-https').redirectToHTTPS;
 
 // Don't redirect if the hostname is `localhost:port` or the route is `/insecure`
-app.use(redirectToHTTPS([/localhost:(\d{4})/], [/\/insecure/], 301));
+// cdr app.use(redirectToHTTPS([/localhost:(\d{4})/], [/\/insecure/], 301));
 
 // Middlewares
 app.use(bodyParser.urlencoded({ extended: false }));
